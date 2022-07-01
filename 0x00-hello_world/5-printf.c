@@ -3,8 +3,8 @@
 /**
  * main - prints a string using "printf"
  *
- * Return: Zero(0) for Success
- */     
+ * Return: Zero(0) for Succes
+ */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
