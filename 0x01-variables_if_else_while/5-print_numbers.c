@@ -1,18 +1,19 @@
-#include <stdio.>
+#include <stdio.h>
 
 /**
- *main -> assign a random number to the variable n each time it is executed
- *and print the last digit of the number stored in the variable n
- *Return: Always 0 (Success)
+ * main - The Entry Point for C code.
+ *
+ * Return: The Endpoint for C code. Success
  */
+
 int main(void)
 {
-int n;
+	int i = 0;
 
-for (n = 0; n < 10; n++)
-{
-printf("%d", n);
-}
-printf("\n");
-return (0);
+	do {
+		printf("%d", i);
+		i++;
+	} while (i <= 9)
+	putchar('\n');
+	return (0);
 }
