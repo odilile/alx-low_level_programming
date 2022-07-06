@@ -20,7 +20,7 @@ int fibb(unsigned int i)
 /**
  * main - print fibonacci numbers between 1 and 98.
  *
- * Return: Always 0 (Success).
+ * Return: Zero.
  */
 int main(void)
 {
