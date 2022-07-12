@@ -4,16 +4,12 @@
  * print_rev - function that prints a string in reverse
  *
  * @s: input string.
- *
  */
 void print_rev(char *s)
 {
 	int i;
 
 	for (i = 0; s[i] != '\0'; i++)
-	{
-		i++;
-	}
 
 	for (i = i - 1; s[i] != '\0'; i--)
 	{
