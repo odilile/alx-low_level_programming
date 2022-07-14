@@ -2,7 +2,7 @@
 
 /**
  * leet - Encodes a string into 1337.
- * @str: String to encode.
+ * @str: String to encoded
  *
  * Return: pointer to string
  */
@@ -10,8 +10,8 @@ char *leet(char *str)
 {
 	int i, j;
 
-	char *a = "aAeEoOtTlL";
-	char *b = "4433007711";
+	char c1[] = "aAeEoOtTlL";
+	char c2[] = "4433007711";
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
