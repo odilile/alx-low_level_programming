@@ -1,54 +1,42 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * add_node_end - adds a node at the end of the list_t list.
- * @head: pointer to list_t list pointer.
- * @str: pointer to the string.
+ * add_node_end - adds a new node at the end
+ * of a list_t list.
+ * @head: head of the linked list.
+ * @str: string to store the head.
  *
- * Return: address of the new node, NULL otherwise.
+ * Return: address of the head.
  */
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *ptr;
-	list_t *tmp;
-	char *s_dup;
-	unsigned int counter;
+	list_t *new, *tmp;
+	size_t nchar;
 
-	counter = 0;
-
-	ptr = (list_t *)malloc(sizeof(list_t **));
-
-	if (str == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
 
-	if (ptr == NULL)
-		return (NULL);
+	new->str = strdup(str);
 
-	while (str[counter])
-		counter++:
+	for (nchar = 0; str[nchar]; nchar++)
+		;
 
-	s_dup = strdup(str);
+	new->len = nchar;
+	new->next = NULL;
+	temp = *head;
 
-	if (*head == NULL)
+	if (temp == NULL)
 	{
-		head = ptr;
-		ptr->len = counter;
-		ptr->str = s_dup;
-		ptr->next = NULL;
-		return (ptr);
+		*head = new;
 	}
-	tmp = *head;
+	else
+	{
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
+	}
 
-	while (tmp->next != NULL)
-		tmp = tmp->next;
-
-	tmp->next = ptr;
-	ptr->len = counter;
-	ptr->str = s_dup;
-	ptr->next = NULL;
-
-	return (ptr);
+	return (*head);
 }
