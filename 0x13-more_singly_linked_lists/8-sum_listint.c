@@ -6,7 +6,6 @@
  * @head: head node.
  *
  * Return: the sum.
- *
  */
 
 int sum_listint(listint_t *head)
