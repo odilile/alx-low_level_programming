@@ -6,7 +6,7 @@
  * @d: the struct dog.
  */
 
- void print_dog(struct dog *d)
+void print_dog(struct dog *d)
 {
 	if (d)
 	{
