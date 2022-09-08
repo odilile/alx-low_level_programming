@@ -1,4 +1,4 @@
-nclude "function_pointers.h"
+#include "function_pointers.h"
 #include <stdio.h>
 
 /**
@@ -13,10 +13,9 @@ nclude "function_pointers.h"
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	unsigned int i;
+	size_t j;
 
-	if (array && action)
-		for (i = 0; i < size; i++)
-			for (i = 0; i < size; i++)
-				action(array[i]);
+	if (array != NULL && action != NULL)
+	for (j = 0; j < size; j++)
+		(action(array[j]));
 }
