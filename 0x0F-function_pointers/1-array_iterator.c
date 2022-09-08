@@ -2,13 +2,12 @@
 #include <stdio.h>
 
 /**
- * array_iterator - A function that executes a function given as a
- * parameter on each element of an array.
- * @array: input integer array.
- * @size: This is the size of the array.
+ * array_iterator - itarates a function.
+ * @array: the array
+ * @size: size of the array.
  * @action: pointer to the function.
  *
- * Return: no return.
+ * Return Nothing
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
